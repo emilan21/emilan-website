@@ -12,6 +12,7 @@ jobs:
     - name: Configure AWS credentials from Website1 account
       uses: aws-actions/configure-aws-credentials@v4
       with:
+        audience: sts.amazonaws.com.cn
         role-to-assume: arn:aws:iam::843083765050:role/GitHub-Web-Site
         aws-region: us-east-1
     - name: Copy files to the test website with the AWS CLI
@@ -20,6 +21,7 @@ jobs:
     - name: Configure AWS credentials from Production account
       uses: aws-actions/configure-aws-credentials@v4
       with:
+        audience: sts.amazonaws.com.cn
         role-to-assume: arn:aws:iam::518835924951:role/GitHub-Web-Site
         aws-region: us-east-1
     - name: Copy files to the production website with the AWS CLI
