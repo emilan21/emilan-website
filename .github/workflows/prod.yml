@@ -1,0 +1,28 @@
+name: Push main to Prod S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      # Website1 Account
+      - name: Checkout
+        uses: actions/checkout@v3
+        # Prod Account
+      - name: Configure AWS credentials from Production account
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          audience: sts.amazonaws.com.cn
+          role-to-assume: arn:aws:iam::518835924951:role/GitHub-Web-Site
+          aws-region: us-east-1
+      - name: Copy files to the production website with the AWS CLI
+        run: |
+          aws s3 sync . s3://eric-milan-dev-prod
