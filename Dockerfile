@@ -10,6 +10,7 @@ RUN apt-get -y update \
 	libmagickwand-dev \
 	ruby \
 	rubygems \
+	ruby-dev \
         git \
         wget \
 	nodejs\
