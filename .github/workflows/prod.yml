@@ -30,10 +30,12 @@ jobs:
           directory: "./public"
           arguments: --extension
 
-      - name: Install percy
+      - name: Install npm
         uses: actions/setup-node@v3
         with:
           node-version: '14'
+
+      - name: Install percy
         run: npm install --save-dev @percy/cli
 
       - name: Run percy
