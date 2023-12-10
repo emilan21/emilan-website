@@ -33,9 +33,6 @@ jobs:
       - name: Install percy
         run: npm install --save-dev @percy/cli
 
-      - name: tree
-        run: tree
-
       - name: Build Hugo Site
         run: hugo
 
@@ -48,7 +45,7 @@ jobs:
       - name: Run percy
         run: npx percy snapshot public/
         env:
-          PERCY_TOKEN: $
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
         # Prod Account
       - name: Configure AWS credentials from Production account
