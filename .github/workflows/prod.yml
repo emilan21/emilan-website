@@ -25,6 +25,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Clean public directory
+        run: rm -rf public
+
       - name: Install npm
         uses: actions/setup-node@v3
         with:
@@ -34,7 +37,7 @@ jobs:
         run: npm install --save-dev @percy/cli
 
       - name: Build Hugo Site
-        run: hugo
+        run: hugo --theme=hugo-profile
 
       - name: Check HTML
         uses: chabad360/htmlproofer@master
