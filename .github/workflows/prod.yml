@@ -13,7 +13,6 @@ jobs:
       id-token: write
       contents: read
     steps:
-      # Website1 Account
       - name: Checkout
         uses: actions/checkout@v3
         # Prod Account
@@ -30,4 +29,3 @@ jobs:
       - name: Clear cloudfront cache
         run: |
           aws cloudfront create-invalidation --distribution-id ELSHKOIW1KG0W --paths "/*"
-
