@@ -19,9 +19,7 @@ RUN apt-get -y update \
 RUN npm install --location=global npm
 RUN npm install --location=global percy
 
-RUN gem -v
-
-RUN gem install html-proofer
+RUN gem install html-proofer -v 3.4.0
 
 RUN htmlproofer --extension .html ./public
 
