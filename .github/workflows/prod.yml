@@ -21,15 +21,6 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Build
-        run: hugo --minify
-
-      - name: Check HTML
-        uses: chabad360/htmlproofer@master
-        with:
-          directory: "./public"
-          arguments: --extension
-
       - name: Install npm
         uses: actions/setup-node@v3
         with:
@@ -37,6 +28,15 @@ jobs:
 
       - name: Install percy
         run: npm install --save-dev @percy/cli
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "public/"
+          arguments: --extension
 
       - name: Run percy
         run: npx percy snapshot public/
