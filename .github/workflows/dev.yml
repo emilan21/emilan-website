@@ -1,19 +1,31 @@
-name: ci
+name: circlci
 
 on:
   push:
     branches:
       - "dev"
+
+ersion: 2.1
+
+orbs:
+  hugo: circleci/hugo@0.3
+
 jobs:
-  list_dir_job:
-    runs-on: ubuntu-latest
-    name: A job to list dirs
+  snapshot:
+    docker:
+      - image: buildkite/puppeteer:v1.15.0
     steps:
-      - name: List dirs action step
-        id: list_dirs
-        uses: actions/list_dirs_action@v2
-        with:
-          dir_name: 'Testing github actions'
-      # Use the output from the `hello` step
-      - name: Get the output
-        run: echo "The dirs were ${{ steps.hello.outputs.list_dirs }}"
+      - attach_workspace:
+          at: .
+      - run: npm install percy
+      - run: PERCY_TOKEN=$PERCY_TOKEN npx percy snapshot ./public
+
+workflows:
+  main:
+    jobs:
+      - hugo/build:
+          version: "0.55.6"
+          html-proofer: true
+      - snapshot:
+          requires:
+            - hugo/build
