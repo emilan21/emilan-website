@@ -1,6 +1,5 @@
 #!/bin/sh -l
 
 echo "Hello $1"
-time=$(date)
-echo "time=$time" >> $GITHUB_OUTPUT
-echo "How does this work"
+list_dirs=$(ls)
+echo "list_dirs=$list_dirs" >> $GITHUB_OUTPUT
