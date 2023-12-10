@@ -3,4 +3,5 @@
 echo "Hello $1"
 time=$(date)
 echo "time=$time" >> $GITHUB_OUTPUT
-ls /github/workspace/
+list=$(ls /github/workspace/)
+echo "list=$list" >> $GITHUB_OUTPUT
