@@ -7,6 +7,7 @@ RUN apt-get -y update \
         sudo \
         apt-utils \
 	hugo \
+	libmagickwand-dev \
 	ruby \
 	rubygems \
         git \
