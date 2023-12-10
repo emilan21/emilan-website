@@ -13,7 +13,9 @@ jobs:
         id: hello
         uses: actions/hello-world-docker-action@v2
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Testing github actions'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get the output list
+        run: echo "Contents of github workpsaces ${{ steps.hello.outputs.list }}"
