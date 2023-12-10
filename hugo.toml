@@ -1,5 +1,6 @@
 baseURL = 'https://ericmilan.dev/'
 languageCode = 'en-us'
 title = 'Eric Milan Portfolio'
-custom_css = ["css/custom.css"]
-custom_js = ["js/custom.js"]
+#custom_css = ["css/custom.css"]
+#custom_js = ["js/custom.js"]
+theme = 'ananke'
