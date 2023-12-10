@@ -30,6 +30,8 @@ RUN apt-get -y update \
 RUN npm install --location=global npm
 RUN npm install --location=global percy
 
+RUN ls
+
 RUN hugo
 
 RUN gem install html-proofer -v 3.4.0
