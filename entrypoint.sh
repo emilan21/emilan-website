@@ -3,4 +3,4 @@
 echo "Hello $1"
 time=$(date)
 echo "time=$time" >> $GITHUB_OUTPUT
-echo `ls`
+echo "How does this work"
