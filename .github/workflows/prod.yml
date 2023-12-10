@@ -15,6 +15,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "./public"
+          arguments: --extension
+
+      - name: Install percy
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+        run: npm install --save-dev @percy/cli
+
+      - name: Run percy
+        run: npx percy snapshot public/
+        env:
+          PERCY_TOKEN: $
+
         # Prod Account
       - name: Configure AWS credentials from Production account
         uses: aws-actions/configure-aws-credentials@v4
