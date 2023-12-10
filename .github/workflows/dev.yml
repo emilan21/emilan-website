@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: List dirs action step
         id: list_dirs
-        uses: actions/emilan-website@v2
+        uses: actions/list_dirs_action@v2
         with:
           dir_name: 'Testing github actions'
       # Use the output from the `hello` step
