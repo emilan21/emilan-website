@@ -8,7 +8,15 @@ RUN apt-get -y update \
         apt-utils \
 	hugo \
 	libmagickwand-dev \
-	ruby \
+	build-essential \
+	libsdl2-dev \
+	libsdl2-ttf-dev \
+	libpango1.0-dev \
+     	libgl1-mesa-dev \
+	libopenal-dev \
+	libsndfile-dev \
+	libmpg123-dev \
+        libgmp-dev \
 	rubygems \
 	ruby-dev \
         git \
