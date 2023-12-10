@@ -17,6 +17,7 @@ RUN apt-get -y update \
 	libsndfile-dev \
 	libmpg123-dev \
         libgmp-dev \
+	libcurl4 \
 	rubygems \
 	ruby-dev \
         git \
