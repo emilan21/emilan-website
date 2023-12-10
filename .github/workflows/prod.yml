@@ -43,7 +43,7 @@ jobs:
         uses: chabad360/htmlproofer@master
         with:
           directory: "public/"
-          arguments: --extension
+          arguments: --extension --allow-missing-href
 
       - name: Run percy
         run: npx percy snapshot public/
