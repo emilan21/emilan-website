@@ -8,6 +8,8 @@ RUN apt-get -y update \
         apt-utils \
 	hugo \
 	ruby \
+	ruby-devel \
+	ruby-dev \
         git \
         wget \
 	nodejs\
