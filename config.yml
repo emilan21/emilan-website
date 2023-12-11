@@ -23,17 +23,7 @@ markup:
       unsafe: true
 
 Menus:
-  main:
-    - identifier: blog
-      name: Blog
-      title: Blog posts
-      url: /blogs
-      weight: 1
-    - identifier: gallery
-      name: Gallery
-      title: Blog posts
-      url: /gallery
-      weight: 2
+  # main:
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
@@ -124,7 +114,7 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Eric."
+    title: "Eric"
     subtitle: "I work in Devops and System Administration"
     content: "A passionate Devops Engineer. I tend to make use of modern technologies to build, deploy, and maintain services"
     image: /images/hero.svg
@@ -151,84 +141,72 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
+      I am a devops engineer with a passion for automation. I have a background in system administration and automation, and I have a strong interest in technology. I am currently working as a network engineer [West Jefferson Hills School District](https://wjhsd.net) in Jefferson Hills, PA. 
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
+        - "Ansible"
+        - "AWS"
+        - "Bash"
+        - "C"
         - "CSS"
+        - "Docker"
+        - "GCP"
+        - "Git"
+        - "Go"
+        - "HTML"
         - "JavaScript"
-        - "React"
-        - "Node"
-        - "Express"
+        - "KVM"
+        - "Linux"
+        - "Packer"
+        - "Python"
+        - "Redhat"
+        - "Terraform"
+        - "Ubuntu"
+        - "Unix"
+        - "Vim"
+        - "VMware"
+        - "VScode"
+        - "Windows"
 
   # Experience
   experience:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
-        featuredLink:
-          enable: true
-          name: "View the project"
-          url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
+      - job: "Network Engineer"
+        company: "West Jefferson Hills School District"
+        companyUrl: "https://wjhsd.net"
+        date: "Apr 2018 - present"
         info:
           enable: true
-          content: I worked as a software developer for more than one year in Amazon.
+          content: I current work as a Network Engineer for more than six years at West Jefferson Hills School District.
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          I am currently working as a Network Engineer at [West Jefferson Hills School District](https://wjhsd.net) in Jefferson Hills, PA.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          - Utilized Terraform to automate IT infrastructure for KVM, GCP, and AWS environments.
+          - Utilized Ansible to automate configuration and management of IT infrastructure for KVM, GCP, AWS, Linux and Windows systems.
+          - Spearheaded project replacing VMware environment with KVM, GPC, and AWS reducing cost by 70%.
+          - Developed Go web application to locate devices on wireless networks reducing the risk of lost devices by 80%.
+          - Developed multiple Go and Python applications for automating common tasks such as automated backups and data processing.
+          - Leveraged knowledge in Git, IaC tools Terraform, Ansible, and Packer, programming in Go and Python using Vim, Full Stack Web development, Docker.
 
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
+      - job: "Computer Techincian"
+        company: "Frazier School District"
+        companyUrl: "https://fraziersd.org"
+        date: "Aug 2013 - Apr 2018"
         info:
-          enable: false
-        featuredLink:
           enable: true
-          url: "https://example.com"
+          content: I worked as a Computer Techincan for more than five years at Frazier School District.
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          I worked as a Computer Techincan at [Frazier School District](https://fraziersd.org) in Perryopolis, PA.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+          - Spearheaded project replacing VMware environment with AWS reducing cost by 60%.
+          - Increased wireless coverage from 20% to 100% by implementing a Cisco Meraki wired and wireless network.
+          - Developed Python application for monitoring the temperature and humidity of a student run greenhouse project.
+          - Leveraged knowledge in Git, programming in Python using Vim, Full Stack Web development.
 
   # Education
   education:
@@ -236,64 +214,30 @@ params:
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Business Administration"
+      - title: "Bachelor of Science Cloud and Systems Administration"
         school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: "Western Governors University"
+          url: "https://wgu.edu"
+        date: "Apr 2018 - Apr 2020"
         content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
+          Coursework
+            - Scripting & Programming
+            - Web Development
+            - Cloud
+            - Network & Security
+            - Linux
+      - title: "Master of Science Cybersecurity and Information Assurance"
         school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
+          name: "Western Governors University"
+          url: "https://wgu.edu"
+        date: "Aug 2020 - May 2021"
         content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://example.com"
-      - title: "High School"
-        school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-
-  # Achievements
-  achievements:
-    enable: true
-    # title: "Custom Name"
-    items:
-      - title: Google kickstart runner
-        content: I solved all problems with optimal solution.
-        url: https://example.com
-        image: /images/achievment.jpg
-      - title: Facebook Hackathon Winner
-        content: Developed a product using Artificial Intelligence.
-        image: /images/achievment.jpg
-      - title: Hugo Profile
-        content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
-        image: /images/achievment.jpg
-      - title: Microsoft Imagine Runner
-        content: We are developed a product which can help others.
-      - title: Google Summer of Code
-        content: Contributed to a open source project.
-        url: https://example.com
+          Coursework
+            - Secure Network Design
+            - Security Operations
+            - Cloud Security
+            - Secure Software Design
+            - Cybersecurity Architecture and Engineering
 
   # projects
   projects:
@@ -359,15 +303,9 @@ params:
     #   messageCaption: "Enter your message here"
 
   footer:
-    recentPosts:
-      path: "blogs"
-      count: 3
-      title: Recent Posts
-      enable: true
-      disableFeaturedImage: false
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
+      github: https://github.com/emilan21
+      linkedin: https://linkedin.com/in/eric-milan-55b240290
 
   # List pages like blogs and posts
   listPages:
