@@ -3,12 +3,11 @@ import boto3
 
 
 def lambda_handler(event, context):
-    session1 = boto3.Session(profile_name='Production-Account.Developer')
     id = event["id"]
     visit_count = 0
 
     # Create a Dynamodb client
-    dynamodb = session1.resource('dynamodb')
+    dynamodb = boto3.resource('dynamodb')
     table_name = os.environ["TABLE_NAME"]
     table = dynamodb.Table(table_name)
 
