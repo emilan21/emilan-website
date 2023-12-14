@@ -4,6 +4,7 @@ import boto3
 
 def lambda_handler(event, context):
     event_id = event["id"]
+    visit_count = 0
 
     # Create a Dynamodb client
     dynamodb = boto3.resource('dynamodb')
@@ -23,5 +24,5 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": response['ResponseMetadata']['HTTPStatusCode'],
-        'body': 'Record ' + event_id + ' added. Count is now ' + visit_count
+        'body': 'Record ' + str(event_id) + ' added. Count is now ' + str(visit_count)
     }
