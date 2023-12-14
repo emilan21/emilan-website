@@ -18,3 +18,5 @@ def lambda_handler(event, context):
             "statusCode": del_response['ResponseMetadata']['HTTPStatusCode'],
             'body': 'Record ' + str(event_id) + ' deleted'
         }
+    else:
+        return {'statusCode': '404', 'body': 'Not found'}
