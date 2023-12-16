@@ -19,9 +19,6 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Run ls
-        run: ls
-
       - name: Check HTML
         uses: chabad360/htmlproofer@master
         with:
@@ -52,4 +49,4 @@ jobs:
           aws-region: us-east-1
       - name: Copy files to the production website with the AWS CLI
         run: |
-          aws s3 sync . s3://eric-milan-dev-prod && aws cloudfront create-invalidation --distribution-id ELSHKOIW1KG0W --paths "/*"
+          aws s3 sync frontend/* s3://eric-milan-dev-prod && aws cloudfront create-invalidation --distribution-id ELSHKOIW1KG0W --paths "/*"
