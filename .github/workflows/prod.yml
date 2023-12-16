@@ -22,7 +22,7 @@ jobs:
       - name: Check HTML
         uses: chabad360/htmlproofer@master
         with:
-          directory: "frontend/html"
+          directory: "frontend/"
           # The directory to scan
           arguments: --allow-missing-href
           # The arguments to pass to HTMLProofer
@@ -36,7 +36,7 @@ jobs:
         run: npm install --save-dev @percy/cli
 
       - name: Run percy
-        run: npx percy snapshot frontend/html/
+        run: npx percy snapshot frontend/
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
