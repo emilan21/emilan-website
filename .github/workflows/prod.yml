@@ -24,7 +24,7 @@ jobs:
         with:
           directory: "frontend/"
           # The directory to scan
-          arguments: --allow-missing-href --extensions ['.html', '.css']
+          arguments: --allow-missing-href --extensions .html.erb
           # The arguments to pass to HTMLProofer
 
       - name: Install npm
