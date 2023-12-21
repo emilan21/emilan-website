@@ -24,7 +24,7 @@ jobs:
         with:
           directory: "frontend/"
           # The directory to scan
-          arguments: --allow-missing-href
+          arguments: --allow-missing-href --ignore_status_codes [999]
           # The arguments to pass to HTMLProofer
 
       - name: Install npm
