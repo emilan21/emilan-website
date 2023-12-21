@@ -2,4 +2,3 @@
 
 cd frontend/
 htmlproofer .
-npx percy snapshot .

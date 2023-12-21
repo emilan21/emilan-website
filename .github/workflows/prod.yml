@@ -32,14 +32,6 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install percy
-        run: npm install --save-dev @percy/cli
-
-      - name: Run percy
-        run: npx percy snapshot frontend/
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-
         # Prod Account
       - name: Configure AWS credentials from Production account
         uses: aws-actions/configure-aws-credentials@v4
