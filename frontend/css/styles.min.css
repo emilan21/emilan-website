@@ -21,10 +21,10 @@ main {
 /* section */
 section {
   display: flex;
-  /*   margin-top:4rem; */
+  margin-top:4rem;
   /* justify-content: center; */
   flex-direction: column;
-  height: 75vh;
+  /*height: 90vh; */
   margin-left: 20px;
   /*   margin-top:7vh; */
 }
