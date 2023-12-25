@@ -24,5 +24,8 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": response['ResponseMetadata']['HTTPStatusCode'],
-        'body': 'Record ' + str(event_id) + ' added. Count is now ' + str(visit_count)
+        'headers': {
+            "Access-Control-Allow-Origin": 'origin'
+        },
+        'body': str(visit_count)
     }
