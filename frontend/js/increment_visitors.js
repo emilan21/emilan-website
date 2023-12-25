@@ -6,14 +6,6 @@ const INCREMENT_API = 'https://7voh9igajc.execute-api.us-east-1.amazonaws.com/er
 
 var hasVisited = sessionStorage.getItem('hasVisited');
 
-// this is the first time
-//if (! localStorage.noFirstVisit) {
-//    // update visitor count
-//
-//    // check this flag for escaping this if block next time
-//    localStorage.noFirstVisit = "1";
-//}
-
 if ( ! hasVisited ) {
 	fetch(INCREMENT_API, {
 	  method: 'POST',
