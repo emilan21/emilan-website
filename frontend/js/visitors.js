@@ -15,7 +15,11 @@ fetch(API, {
 .then((response) => response.json())
 .then((data) => {
     //handle data
-	document.getElementById("visits").innerHTML = data.body.count;
+	if (data.body.count) {
+		document.getElementById("visits").innerHTML = data.body.count;
+	} else {
+		document.getElementById("visits").innerHTML = "0";
+	}
 })
 .catch(error => {
     //handle error
